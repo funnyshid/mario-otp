@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <head>
+        <title>OTP Game</title>
+    </head>
+    <div id="main-container">
+        <p>Please use the game below to enter the verification code sent to (&#8226;&#8226;&#8226;)
+            &#8226;&#8226;&#8226;-&#8226;&#8226;&#8226;&#8226;.</p>
+        <div id="input-container">
+            <div class="input-box" id="input-box-1"></div>
+            <div class="input-box" id="input-box-2"></div>
+            <div class="input-box" id="input-box-3"></div>
+            <div class="input-box" id="input-box-4"></div>
+            <div class="input-box" id="input-box-5"></div>
+            <div class="input-box" id="input-box-6"></div>
+        </div>
+        <div id="incorrect">The code you entered was incorrect.</div>
+        <div id="game-container"></div>
+        <button id="verify-button">Verify</button>
+        <p>Didn't receive the code? <a href="#">Resend</a></p>
+        <div id="game-container">
+        </div>
+    </div>
+
+</body>
+<script src="index.js" type="module"></script>
+<style>
+        * {
+            box-sizing: border-box;
+            border-radius: 8px !important;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e2e3e4;
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        #main-container {
+            width: 100%;
+            max-width: 360px;
+            padding: 16px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        #input-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .input-box {
+            width: 32px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #e3e3e4;
+        }
+
+        #verify-button {
+            width: 256px;
+            padding: 14px;
+            margin-top: 8px;
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        #incorrect {
+            color: #cc0000;
+            margin-top: 8px;
+            font-size: smaller;
+            display: none;
+        }
+
+        #verify-button:hover {
+            background-color: #a30000;
+        }
+
+        a {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        canvas {
+            margin-top: 16px;
+            image-rendering: pixelated;
+            border-radius: 0 !important;
+        }
+
+        #debug-info {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            text-align: left;
+            font-family: monospace;
+        }
+    </style>
+
+</html>
